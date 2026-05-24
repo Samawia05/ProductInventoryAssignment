@@ -25,4 +25,6 @@ Make sure the local database engine is active on your Windows machine:
 ### 2. Launch the Backend API Server
 Open your system terminal window inside the server project root directory (`ProductInventoryManager`) and run:
 ```bash
-<img width="958" height="461" alt="image" src="https://github.com/user-attachments/assets/ed3cb1e4-776f-413e-9bed-63cb7889a739" />
+## 📊 Application Preview
+
+-Screenshots ![Home Page](screenshot.png)
