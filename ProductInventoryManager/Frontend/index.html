@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Inventory Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Product Inventory Manager</h1>
+            <button id="btn-nav-add" class="btn btn-primary">Add New Product</button>
+        </header>
+
+        <main id="page-dashboard" class="view-panel">
+            <h2>Inventory Records</h2>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product Name</th>
+                            <th>Category</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="inventory-table-body">
+                        </tbody>
+                </table>
+            </div>
+        </main>
+
+        <section id="page-form" class="view-panel hidden">
+            <h2 id="form-title">Add Product</h2>
+            <form id="product-form" novalidate>
+                <input type="hidden" id="product-id">
+                
+                <div class="form-group">
+                    <label for="product-name">Product Name *</label>
+                    <input type="text" id="product-name" required>
+                    <span class="error-msg" id="err-name"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="product-category">Category *</label>
+                    <input type="text" id="product-category" required>
+                    <span class="error-msg" id="err-category"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="product-price">Price ($) *</label>
+                    <input type="number" id="product-price" step="0.01" required min="0.01">
+                    <span class="error-msg" id="err-price"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="product-quantity">Quantity *</label>
+                    <input type="number" id="product-quantity" required min="0">
+                    <span class="error-msg" id="err-quantity"></span>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-success" id="btn-submit">Save Product</button>
+                    <button type="button" class="btn btn-secondary" id="btn-cancel">Cancel</button>
+                </div>
+            </form>
+        </section>
+    </div>
+
+   <script src="./app.js"></script>
+</body>
+</html>
